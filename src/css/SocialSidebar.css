@@ -1,0 +1,67 @@
+:root {
+  --accent: #64ffda;
+  --accent-hover: #ffffff;
+}
+
+/* Fixed vertical sidebar toward bottom */
+.social-sidebar-alt {
+  position: fixed;
+  left: 0.8rem;      /* shifted much closer to the left edge */
+  bottom: 8%;        /* start ~15% above bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;        /* slightly smaller spacing */
+  z-index: 1000;
+}
+
+/* Social icons - 25% smaller than before */
+.social-sidebar-alt a {
+  color: var(--accent);
+  font-size: 1.3rem;  /* smaller icons */
+  padding: 0.4rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-sidebar-alt a:hover {
+  transform: translateY(-3px) scale(1.05);
+  color: var(--accent-hover);
+}
+
+/* Optional vertical line for style */
+.social-sidebar-alt .vertical-line {
+  width: 2px;
+  height: 50px;
+  background: var(--accent);
+  margin-top: 0.75rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .social-sidebar-alt {
+    left: 0.5rem;
+    bottom: 10%;
+    gap: 0.4rem;
+  }
+  .social-sidebar-alt a {
+    font-size: 1rem;
+  }
+  .social-sidebar-alt .vertical-line {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-sidebar-alt {
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    transform: none;
+    margin: 15px 0;
+  }
+  .social-sidebar-alt .vertical-line {
+    display: none;
+  }
+}

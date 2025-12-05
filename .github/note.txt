@@ -1,0 +1,4 @@
+1. Just paste this in your project directory.
+2. update your vite.config.js add "base" : /repo-name/
+3. in github settings/pages set source to github actions
+Your are done

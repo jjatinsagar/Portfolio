@@ -1,0 +1,19 @@
+.email-sidebar {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  z-index: 100;
+}
+
+.email-sidebar a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.email-sidebar a:hover {
+  transform: translateY(-3px);
+}
