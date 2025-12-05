@@ -71,6 +71,10 @@
 }
 
 @media (max-width: 480px) {
+  .hero {
+    min-height: calc(100vh - 100px); 
+  }
+
   .hero-title {
     font-size: 2rem;
   }
