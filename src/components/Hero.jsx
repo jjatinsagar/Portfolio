@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section id="home" className="hero">
       <h1 className="hero-title" data-aos="fade-up">
-        Hi, I'm{" "}
+         I'm{" "}
         <span className="highlight">
           <Typewriter
             words={["Jatin Sagar"]}
