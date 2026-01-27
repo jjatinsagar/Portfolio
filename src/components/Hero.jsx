@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/Hero.css";
 import { Typewriter } from "react-simple-typewriter";
+import CursorGlow from "./CursurGlow";
 
 export default function Hero() {
   return (
@@ -30,6 +31,9 @@ export default function Hero() {
           Contact Me
         </a>
       </div>
+
+      <CursorGlow />
+
     </section>
   );
 }
