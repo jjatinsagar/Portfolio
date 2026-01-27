@@ -26,12 +26,11 @@ export default function CursorGlow() {
         pointerEvents: "none",
         zIndex: 0,
 
-        /* THE IMPORTANT PART */
         background: `
           radial-gradient(
             700px 700px at ${pos.x}px ${pos.y}px,
           rgba(0, 140, 255, 0.25),
-          transparent 20%
+          transparent 70%
           )
         `,
         transition: "background 0.15s ease-out",
