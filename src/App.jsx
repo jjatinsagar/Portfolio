@@ -22,7 +22,7 @@ export default function App() {
       duration: 800,
       easing: "ease-out-quart",
       once: true,
-    });
+    }, []);
 
     // Loading screen timeout
     const timer = setTimeout(() => {
@@ -40,9 +40,10 @@ export default function App() {
   // Once loading is done, render full site
   return (
     <>
-      <Navbar />
-      <SocialSidebar />
-      <EmailSidebar />
+      <Navbar pageLoaded={!loading} />
+      <SocialSidebar pageLoaded={!loading} />
+      <EmailSidebar pageLoaded={!loading} />
+
       <main>
         <Hero />
         <About />

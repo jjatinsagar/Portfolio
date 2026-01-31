@@ -2,22 +2,32 @@ import React from "react";
 import "../css/Hero.css";
 import { Typewriter } from "react-simple-typewriter";
 import CursorGlow from "./CursurGlow";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+    const [showTypewriter, setShowTypewriter] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowTypewriter(true);
+    },1500);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <section id="home" className="hero">
-      <h1 className="hero-title" data-aos="fade-up">
+      <h1 className="hero-title" data-aos="fade-up" data-aos-delay="200">
          I'm{" "}
         <span className="highlight">
-          <Typewriter
+          { showTypewriter && <Typewriter
             words={["Jatin Sagar"]}
             loop={false}
             cursor
             cursorStyle="|"
             typeSpeed={120}
             deleteSpeed={80}
-            delaySpeed={4000}
-          />
+            delaySpeed={5000}
+          />}
         </span>
       </h1>
       <p className="hero-sub" data-aos="fade-up" data-aos-delay="200">

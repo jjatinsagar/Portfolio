@@ -1,3 +1,5 @@
+/* ================= NAVBAR BASE ================= */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -12,19 +14,57 @@
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   z-index: 1000;
+
+  /* entry state */
+  transform: translateY(-100%);
+  opacity: 0;
 }
+
+/* page-entry trigger */
+.navbar.show {
+  animation: navbarDrop 0.8s ease-out forwards;
+}
+
+@keyframes navbarDrop {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ================= LOGO ================= */
 
 .nav-logo {
   font-weight: 700;
   font-size: 22px;
   color: var(--accent-color);
   cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(-30px);
 }
+
+.navbar.show .nav-logo {
+  animation: dropIn 0.6s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* ================= LINKS ================= */
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 24px;
+}
+
+.nav-links li {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.navbar.show .nav-links li {
+  animation: dropIn 0.5s ease-out forwards;
+  animation-delay: calc(0.4s + (var(--i) * 0.1s));
 }
 
 .nav-links a {
@@ -39,7 +79,8 @@
   color: var(--accent-color);
 }
 
-/* Hamburger button */
+/* ================= HAMBURGER ================= */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -54,7 +95,8 @@
   transition: all 0.3s ease;
 }
 
-/* Mobile menu */
+/* ================= MOBILE MENU ================= */
+
 .nav-links.mobile {
   position: absolute;
   top: 70px;
@@ -66,6 +108,21 @@
   padding: 20px 40px;
   display: flex;
 }
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
   .nav-links {

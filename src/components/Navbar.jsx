@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/Navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ pageLoaded }) {
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -22,7 +22,7 @@ export default function Navbar() {
       });
 
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
-        currentSection = sections[sections.length - 1].id;
+        currentSection = sections[sections.length - 1]?.id;
       }
 
       setActive(currentSection);
@@ -40,15 +40,15 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${pageLoaded ? "show" : ""}`}>
       <a href="#home" className="nav-logo">
         JS
       </a>
 
       <ul className={`nav-links ${menuOpen ? "mobile" : ""}`}>
         {["home", "about", "education", "experience", "projects", "contact"].map(
-          (section) => (
-            <li key={section}>
+          (section, index) => (
+            <li key={section} style={{ "--i": index }}>
               <a
                 href={`#${section}`}
                 className={active === section ? "active" : ""}
@@ -62,9 +62,21 @@ export default function Navbar() {
       </ul>
 
       <div className="hamburger" onClick={toggleMenu}>
-        <span style={{ transform: menuOpen ? "rotate(45deg) translate(5px,5px)" : "none" }}></span>
-        <span style={{ opacity: menuOpen ? 0 : 1 }}></span>
-        <span style={{ transform: menuOpen ? "rotate(-45deg) translate(6px,-6px)" : "none" }}></span>
+        <span
+          style={{
+            transform: menuOpen
+              ? "rotate(45deg) translate(5px,5px)"
+              : "none",
+          }}
+        />
+        <span style={{ opacity: menuOpen ? 0 : 1 }} />
+        <span
+          style={{
+            transform: menuOpen
+              ? "rotate(-45deg) translate(6px,-6px)"
+              : "none",
+          }}
+        />
       </div>
     </nav>
   );
