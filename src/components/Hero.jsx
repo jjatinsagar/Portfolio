@@ -10,7 +10,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowTypewriter(true);
-    },1500);
+    },1111);
 
     return () => clearTimeout(timer);
   }, []);
