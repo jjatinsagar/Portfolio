@@ -13,7 +13,7 @@ export default function Contact() {
       </p>
       <br />
             <p data-aos="fade-up" data-aos-delay="200">
-        <a href="public/Jatin_Sagar_Full_Stack_Developer_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Download latest resume.</a>
+        <a href="/Jatin_Sagar_Full_Stack_Developer_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Download latest resume.</a>
       </p>
     </section>
   );
