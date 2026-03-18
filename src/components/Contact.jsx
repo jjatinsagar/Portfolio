@@ -11,6 +11,8 @@ export default function Contact() {
       <p data-aos="fade-up" data-aos-delay="200">
         🌐 GitHub: <a href="https://github.com/jjatinsagar" target="_blank" rel="noopener noreferrer">github.com/jjatinsagar</a> | LinkedIn: <a href="https://linkedin.com/in/jatin-sagar-99025922a" target="_blank" rel="noopener noreferrer">linkedin.com/in/jatin-sagar-99025922a</a>
       </p>
+      <br />
+      <p><a href="https://github.com/jjatinsagar/Portfolio/blob/main/public/Jatin_Sagar_Full_Stack_Developer_Resume_2026.pdf">Download latest my resume here.</a></p>
     </section>
   );
 }
