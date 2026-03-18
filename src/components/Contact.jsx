@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Contact.css";
+import resumepdf from "../asset/Jatin_Sagar_Full_Stack_Developer_Resume_2026.pdf";
 
 export default function Contact() {
   return (
@@ -13,7 +14,7 @@ export default function Contact() {
       </p>
       <br />
             <p data-aos="fade-up" data-aos-delay="200">
-        <a href="/Jatin_Sagar_Full_Stack_Developer_Resume_2026.pdf" download target="_blank" rel="noopener noreferrer">Download latest resume.</a>
+        <a href={resumepdf} download target="_blank" rel="noopener noreferrer">Download latest resume.</a>
       </p>
     </section>
   );
