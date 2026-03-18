@@ -12,7 +12,9 @@ export default function Contact() {
         🌐 GitHub: <a href="https://github.com/jjatinsagar" target="_blank" rel="noopener noreferrer">github.com/jjatinsagar</a> | LinkedIn: <a href="https://linkedin.com/in/jatin-sagar-99025922a" target="_blank" rel="noopener noreferrer">linkedin.com/in/jatin-sagar-99025922a</a>
       </p>
       <br />
-      <p><a href="https://github.com/jjatinsagar/Portfolio/blob/main/public/Jatin_Sagar_Full_Stack_Developer_Resume_2026.pdf">Download latest my resume here.</a></p>
+            <p data-aos="fade-up" data-aos-delay="200">
+        <a href="public/Jatin_Sagar_Full_Stack_Developer_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Download latest resume.</a>
+      </p>
     </section>
   );
 }
