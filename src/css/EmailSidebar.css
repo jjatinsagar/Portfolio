@@ -32,7 +32,8 @@
 }
 
 .email-sidebar a:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.05);
+  color: var(--accent-hover);
 }
 
 /* Hide on very small screens if needed */
