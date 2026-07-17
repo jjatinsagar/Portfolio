@@ -1,0 +1,8 @@
+*{
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    -webkit-user-select: none;
+    user-select: none;
+}

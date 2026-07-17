@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./css/app.css";
 
 import Screen from "./components/Screen";
 import Navbar from "./components/Navbar";
