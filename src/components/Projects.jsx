@@ -3,6 +3,12 @@ import "../css/Projects.css";
 
 export default function Projects() {
   const projects = [
+        {
+      name: "LMS Portal",
+      description: "Full stack app with user authentication, API integration, crud operations, encription, and database management",
+      tech: ["MERN", "Render", "Vercel", "AtlasDB"],
+      link: "https://lms-jwt-iota.vercel.app/",
+    },
     {
       name: "Netflix UI Clone",
       description: "Responsive mobile-first design",
